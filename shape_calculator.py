@@ -5,11 +5,9 @@ class Rectangle:
     
     def set_width(self, width):
         self.width = width
-
     
     def set_height(self, height):
         self.height = height
-
 
     def get_area(self):
         return self.width * self.height
@@ -22,7 +20,7 @@ class Rectangle:
     
     def get_picture(self):
         if self.height > 50 or self.width > 50:
-            return 'Too big for picture'
+            return 'Too big for picture.'
         
         else:
             picture = ''
@@ -34,7 +32,9 @@ class Rectangle:
             return picture
     
     def get_amount_inside(self, figura):
-        pass
+        cabe_width = self.width // figura.width
+        cabe_heigth = self.height // figura.height
+        return cabe_width * cabe_heigth
 
     def __str__(self):
         return f'Rectangle(width={self.width}, height={self.height})'
